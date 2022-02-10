@@ -21,6 +21,7 @@ repositories {
 
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.18.1-R0.1-SNAPSHOT")
+    compileOnly("com.github.CraftTogether:Kelp:1.2-SNAPSHOT-4")
     implementation("com.gitlab.PolarianDev:ircj:1.1-SNAPSHOT-14")
 }
 

@@ -2,3 +2,5 @@ name: Brucke
 version: 1.0
 main: xyz.crafttogether.brucke.Brucke
 api-version: 1.18
+depend:
+  - Kelp
