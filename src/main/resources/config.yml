@@ -2,5 +2,10 @@
 discordGuildId: guild_id
 discordChannelId: channel_id
 discordWebhook: webhook
+discordPrefix: "[Discord]:"
 
 # IRC configuration
+ircPrefix: "[IRC]:"
+
+# Minecraft configuration
+minecraftPrefix: "[Minecraft]:"

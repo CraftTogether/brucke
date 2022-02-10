@@ -28,7 +28,10 @@ class ConfigHandler {
             config = Config(
                 configuration.getLong("discordGuildId"),
                 configuration.getLong("discordChannelId"),
-                configuration.getString("discordWebhook")
+                configuration.getString("discordWebhook"),
+                configuration.getString("discordPrefix"),
+                configuration.getString("ircPrefix"),
+                configuration.getString("minecraftPrefix")
             )
         }
     }
