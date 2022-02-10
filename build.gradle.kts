@@ -23,6 +23,8 @@ dependencies {
     compileOnly("io.papermc.paper:paper-api:1.18.1-R0.1-SNAPSHOT")
     compileOnly("com.github.CraftTogether:Kelp:1.2-SNAPSHOT-4")
     implementation("com.gitlab.PolarianDev:ircj:1.1-SNAPSHOT-14")
+    implementation("com.squareup.okhttp3:okhttp:5.0.0-alpha.4")
+    implementation("org.json:json:20211205")
 }
 
 tasks.withType<KotlinCompile> {

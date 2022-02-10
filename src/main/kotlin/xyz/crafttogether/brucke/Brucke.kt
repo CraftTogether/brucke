@@ -3,6 +3,7 @@ package xyz.crafttogether.brucke
 import org.bukkit.Bukkit
 import org.bukkit.ChatColor
 import org.bukkit.plugin.java.JavaPlugin
+import xyz.crafttogether.brucke.configuration.ConfigHandler
 import xyz.crafttogether.brucke.discord.DiscordEventListener
 import xyz.crafttogether.kelp.Kelp
 
@@ -10,6 +11,7 @@ class Brucke : JavaPlugin() {
 
     override fun onEnable() {
         plugin = this
+        ConfigHandler.loadConfig()
         Kelp.addListeners(DiscordEventListener())
         Bukkit.getConsoleSender().sendMessage(String.format("%sBrucke enabled", ChatColor.GREEN))
     }
