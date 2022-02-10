@@ -13,16 +13,16 @@ class DiscordSender {
         private val logger: Logger = LoggerFactory.getLogger(DiscordSender::class.java)
 
         fun sendMessage(username: String, message: String, avatar: String, source: Source) {
-            if (!Kelp.isConnected()) return;
+            if (!Kelp.isConnected()) return
 
             val args: Array<String> = message.split(" ").toTypedArray()
             for ((i, arg) in args.withIndex()) {
-                if (arg.equals("@here") || arg.equals("@everyone")) {
+                if (arg == "@here" || arg == "@everyone") {
                     args[i] = ""
                 }
             }
             val parsedMessage = args.toString()
-            if (message.isEmpty()) return;
+            if (message.isEmpty()) return
             try {
                 Webhook(ConfigHandler.config.discordWebhook)
                     .setAvatarUrl(avatar)
