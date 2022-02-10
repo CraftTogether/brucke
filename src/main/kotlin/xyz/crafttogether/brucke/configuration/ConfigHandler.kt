@@ -25,7 +25,11 @@ class ConfigHandler {
                 return
             }
             val configuration: FileConfiguration = YamlConfiguration.loadConfiguration(file!!)
-            config = Config(configuration.getLong("discordGuildId"))
+            config = Config(
+                configuration.getLong("discordGuildId"),
+                configuration.getLong("discordChannelId"),
+                configuration.getString("discordWebhook")
+            )
         }
     }
 }

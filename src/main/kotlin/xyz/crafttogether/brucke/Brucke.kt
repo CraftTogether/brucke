@@ -11,6 +11,8 @@ class Brucke : JavaPlugin() {
 
     override fun onEnable() {
         plugin = this
+        config.options().copyDefaults()
+        saveDefaultConfig()
         ConfigHandler.loadConfig()
         Kelp.addListeners(DiscordEventListener())
         Bukkit.getConsoleSender().sendMessage(String.format("%sBrucke enabled", ChatColor.GREEN))
