@@ -16,8 +16,9 @@ object DiscordSender {
         if (!Kelp.isConnected()) return
 
         val args = message.split("\\s+".toRegex()).toMutableList()
-        args.forEachIndexed { i, arg ->
-            if (arg == "@here" || arg == "@everyone") args[i] = ""
+
+        for (i in 0 until args.size) {
+            if (args[i] == "@here" || args[i] == "@everyone") args[i] = ""
         }
         val parsedMessage = args.joinToString(separator = " ")
         if (message.isEmpty()) return
